@@ -86,7 +86,7 @@ Chaque feature dans `frontend/safe_home/lib/features/<nom_feature>/` respecte le
 ### 1. Cloner le Répertoire
 
 ```bash
-git clone <URL_DU_DEPOT_GITHUB>
+git clone https://github.com/ALLCLAD/SafeHome.git
 cd SafeHome
 ```
 
