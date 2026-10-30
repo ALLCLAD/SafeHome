@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: safehome-api
+    runtime: docker
+    dockerfilePath: backend/safehome_api/Dockerfile
+    dockerContext: backend/safehome_api
+    plan: free
+    region: frankfurt
+    autoDeploy: true
+    envVars:
+      - key: DB_URL
+        value: jdbc:postgresql://ep-spring-thunder-za1z4be4-pooler.c-2.eu-west-2.aws.neon.tech/neondb?sslmode=require
+      - key: DB_USERNAME
+        value: neondb_owner
+      - key: DB_PASSWORD
+        value: npg_QKYo2wHUWrV0
+      - key: JWT_SECRET
+        value: 4c8a91f52d7e63b0a198273645eacdf0987123456789abcdef0123456789abcd4c8a91f52d7e63b0a198273645eacdf0
+      - key: JWT_EXPIRATION_MS
+        value: 86400000
+      - key: CORS_ALLOWED_ORIGINS
+        value: "*"
+      - key: MQTT_BROKER_URL
+        value: tcp://broker.hivemq.com:1883
+      - key: MQTT_CLIENT_ID
+        value: safehome_backend_charo_2026
+      - key: MQTT_TOPIC_PREFIX
+        value: safehome_charo_x789
